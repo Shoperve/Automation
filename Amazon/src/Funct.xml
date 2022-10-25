@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+<parameter name="browser" value="Chrome"></parameter> 
+<listeners>
+<listener class-name="GMC.Amazon.Ilisteners"></listener>
+</listeners>
+<test name="Adhoc">
+<!--  <groups>
+<run>
+<include name= "Smoke"></include>
+<include name= "Regression"></include>
+<include name= "Functional"></include>
+</run>
+</groups>-->
+<classes>
+<class name="GMC.Amazon.Amazon"></class>
+<class name="GMC.Amazon.Group"></class>
+</classes>
+</test>
+</suite>
