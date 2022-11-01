@@ -21,7 +21,7 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'test'
  
-   - task: CopyFiles@2
+   - task: CopyFiles@3
   displayName: Copy Files
   inputs:
     SourceFolder: $(system.defaultworkingdirectory)/target/azure-functions/
