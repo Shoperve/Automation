@@ -6,8 +6,6 @@ import org.testng.annotations.BeforeClass;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +28,7 @@ public class Amazon {
  
   @BeforeClass
   public void beforeClass() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\shoperve\\workspace\\SeleniumPractice02\\Amazon\\src\\Driver\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\shoperve\\git\\Automation0431\\Amazon\\src\\Driver2\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://www.amazon.com");
 		driver.manage().window().maximize();

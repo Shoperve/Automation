@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Regression]">
-  <parameter name="browser" value="Chrome"/>
   <listeners>
     <listener class-name="GMC.Amazon.Ilisteners"/>
   </listeners>
   <test thread-count="5" name="Adhoc(failed)">
     <classes>
-      <class name="GMC.Amazon.Group">
-        <methods>
-          <include name="f"/>
-          <include name="f5"/>
-          <include name="f1"/>
-        </methods>
-      </class> <!-- GMC.Amazon.Group -->
       <class name="GMC.Amazon.Amazon">
         <methods>
           <include name="beforeClass"/>
