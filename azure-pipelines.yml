@@ -21,23 +21,4 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'test'
  
-   - task: CopyFiles@3
-  displayName: Copy Files
-  inputs:
-    SourceFolder: $(system.defaultworkingdirectory)/target/azure-functions/
-    Contents: '**'
-    TargetFolder: $(build.artifactstagingdirectory)   
-
-- task: PublishBuildArtifacts@1
-  displayName: Publish Artifact
-  inputs:
-    PathtoPublish: $(build.artifactstagingdirectory)    
-
-
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'connection-to-MyTestRG-rg'
-    appType: 'webApp'
-    appName: '$(appName)'
-    package: '$(System.DefaultWorkingDirectory)/pipelines-java-function-master.zip'
-    deploymentMethod: 'auto'
+   
